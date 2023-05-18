@@ -1,6 +1,7 @@
 import { addToCart } from "./redux/action";
 import { useDispatch } from "react-redux"; 
 import "./App.css";
+import Header from "./components/Header";
 
 function App() { 
   const dispatch = useDispatch()
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <button onClick={()=>dispatch(addToCart(product))}>Add to cart</button>
+      <Header/>
     </div>
   );
 }
